@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC 
+  "-//Hibernate/Hibernate Configuration DTD 3.0//EN" 
+  "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+ <session-factory >
+  <property name="hibernate.show_sql">true</property>
+  <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+  <property name="hibernate.connection.password">nisarpc</property>
+  <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/nisarpc?zeroDateTimeBehavior=convertToNull</property>
+  <property name="hibernate.connection.username">nisarpc</property>
+  <property name="hibernate.dialect">org.hibernate.dialect.MySQL5InnoDBDialect</property>
+
+  <!-- c3p0 -->
+  <property name="hibernate.c3p0.min_size">5</property>
+  <property name="hibernate.c3p0.max_size">100</property>
+  <property name="hibernate.c3p0.timeout">30</property>
+  <property name="hibernate.c3p0.max_statements">50</property>
+  <property name="hibernate.c3p0.idle_test_period">30</property>
+
+  <!-- ========== Mappings ========== -->
+  <mapping class="net.javaguides.hibernate.dao.StudentDao" />
+  <mapping class="net.javaguides.hibernate.model.Student" />
+  <mapping class="net.javaguides.hibernate.util.HibernateUtil" />
+
+    .
+    .
+    .
+  <!-- ========== /Mappings ========== -->
+
+ </session-factory>
+</hibernate-configuration>
